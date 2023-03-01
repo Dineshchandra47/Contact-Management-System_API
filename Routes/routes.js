@@ -10,6 +10,7 @@ app.post("/v1/contacts", async (req, res) => {
     return res.json({ error: `Missing required field :  ${error.message}` });
   }
 });
+
 app.get("/v1/contacts", async (req, res) => {
   try {
     const contacts = await Schema.find();
@@ -67,4 +68,5 @@ app.patch("/v1/contacts/:id", async (req, res) => {
     });
   }
 });
+
 module.exports = app;
